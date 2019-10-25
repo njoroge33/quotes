@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+body {
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+    background-color: rgb(204, 176, 176);
+}
+
+.card {
+    background-color: aliceblue;
+    box-shadow: 5px 10px #888888;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.card-text, .fa {
+    padding: 10px;
+}
+
+.btn {
+    box-shadow: 5px 5px #888888;
+}

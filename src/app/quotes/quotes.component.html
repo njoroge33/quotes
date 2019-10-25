@@ -1,5 +1,13 @@
 <div class='container' *ngFor='let quote of quotes'>
     <div class='card'>
-    <p>{{quot.author}}</p>
+    <div>
+            <button class='btn btn-danger'>Remove</button>
+    <p class="card-text">{{quote.quote}} <br><em> ~{{quote.author}}</em></p>
+    </div>
+    <div class='container'>
+        <span>Created by: {{quote.createdBy}}</span>
+        <span class="fa fa-thumbs-up"></span>
+        <span class="fa fa-thumbs-down"></span>
+    </div>
     </div>
 </div>
