@@ -9,6 +9,8 @@ import { Quote } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
+  showRemove:boolean = false;
+
   quotes: Quote[] = [
     new Quote("Don't live to make your presence noticed, live to make your absence felt",'Bob Marley', '25/2013', 'john'),
     new Quote('Do not gain the world and lose your soul, wisdom is better than silver or gold...','Bob Marley', '25/2013', 'john'),
