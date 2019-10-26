@@ -1,4 +1,11 @@
-form {
+/* form {
     padding-top: 10px;
     padding-bottom: 20px;
+} */
+
+.modal-body {
+    /* width: 100%;
+    margin:0; */
+    background-color: aliceblue;
+
 }
