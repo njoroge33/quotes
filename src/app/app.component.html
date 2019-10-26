@@ -3,10 +3,15 @@
       <h1>{{title}}</h1>
 
     <div>
-      <button class="btn btn-success">Add Quote</button>
+      <button type="button" class="btn btn-success"><a href='#form'>Add Quote</a></button>
     </div>
   </nav>
   <div>
     <app-quotes></app-quotes>
   </div>
+
+  <div class="container" id='form'>
+    <app-quotes-form></app-quotes-form>
+  </div>
+  
 </div>

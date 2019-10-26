@@ -9,7 +9,7 @@ body {
     background-color: rgb(204, 176, 176);
 }
 
-.card {
+.card, #form {
     background-color: aliceblue;
     box-shadow: 5px 10px #888888;
     margin-top:20px;
@@ -22,4 +22,9 @@ body {
 
 .btn {
     box-shadow: 5px 5px #888888;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
