@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
+import { TimeAgoPipe } from './time-ago.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuotesFormComponent
+    QuotesFormComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
