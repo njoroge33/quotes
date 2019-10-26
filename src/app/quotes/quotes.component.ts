@@ -17,7 +17,11 @@ export class QuotesComponent implements OnInit {
     new Quote("And I ask why am I black, they say I was born in sin, and shamed inequity. One of the main songs we used to sing in church makes me sick, 'love wash me and I shall be whiter than snow.",'Peter Tosh', '25/2013', 'john'),
     new Quote("I freed a thousand slaves I could have freed a thousand more if only they knew they were slaves.",'Harriet Tubman', '25/2013', 'john')
 
-  ]
+  ];
+
+  addNewQuote(quote){
+    this.quotes.push(quote);
+  }
 
   constructor() { }
 
