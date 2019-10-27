@@ -10,6 +10,7 @@ import { Quote } from '../quotes';
 export class QuotesComponent implements OnInit, OnChanges {
 
   showRemove: boolean = false;
+  showForm: boolean = true;
 
   quotes: Quote[] = [
     new Quote("Don't live to make your presence noticed, live to make your absence felt", 'Bob Marley', new Date('2019, 02, 12'), 'john', 1, 0),
@@ -19,10 +20,19 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   ];
 
+  // newQuote = {
+  //   createdBy: '',
+  //   quote: '',
+  //   author: '',
+  // }
+
   addNewQuote(quote) {
+    if (quote.createdBy === '' || quote.author === '' || quote.quote === ''){
+      alert('all fields are required!')
+    }else{
     this.quotes.push(quote);
   }
-
+  }
   // addVotes ():void {
   //   this.quotes.upVotes = this.quotes.upVotes+=1;
   // }
@@ -50,6 +60,18 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   }
 
+//   onNotify(message: boolean) {
+//     this.showForm = message;
+// }
+
+  // submitQuote(result) {
+  //   console.log(result)
+  //   this.showForm = false;
+  // }
+
+  // addNewGoal(quote){
+  //   this.quotes.push(quote)
+  // }
   constructor() { }
 
   ngOnInit() {
