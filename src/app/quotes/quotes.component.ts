@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Quote } from '../quotes';
 
 
@@ -7,7 +7,7 @@ import { Quote } from '../quotes';
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })
-export class QuotesComponent implements OnInit {
+export class QuotesComponent implements OnInit, OnChanges {
 
   showRemove: boolean = false;
 
@@ -27,8 +27,21 @@ export class QuotesComponent implements OnInit {
   //   this.quotes.upVotes = this.quotes.upVotes+=1;
   // }
 
+  changeIndex (idx:number) {
+    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
+    // if (this.quotes[idx].upVotes > 0){
+    // console.log(this.quotes.indexOf(this.quotes[idx]));
+    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
+    // console.log(quoteVotes)
+    // const indx = quoteVotes.indexOf(Math.max(...quoteVotes))
+    // console.log(indx)
+    // quoteVotes.splice(0, 0, quoteVotes.splice(indx, 1)[0]);
+    this.quotes.sort((a, b) => b.upVotes - a.upVotes)
+  }
+
   upVote(idx: number) {
     this.quotes[idx].upVotes += 1;
+    this.changeIndex(idx);
 
   }
 
@@ -40,6 +53,10 @@ export class QuotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    this.quotes = this.quotes;
   }
 
 }
