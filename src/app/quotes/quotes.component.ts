@@ -67,12 +67,12 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   }
 
-  // bestQuote () {
-  //   for ( let quote of this.quotes){ 
-  //     if (this.quotes.indexOf(quote) === 0 && quote.upVotes > 0) {
-  //       return quote.quote
-  //     }
-  //     }
+  bestQuote () {
+    for ( let quote of this.quotes){ 
+      if (this.quotes.indexOf(quote) === 0 && quote.upVotes > 0) {
+        return quote.quote
+      }
+      }
     
   }
 
