@@ -21,4 +21,4 @@ No known bugs at the moment
 
 ### License
 * MIT
-`Copyright (c) 2019 **John Gichuhi**Quotesoflife`
+Copyright (c) 2019 **John Gichuhi**'quotes`
