@@ -8,12 +8,13 @@ import { Quote } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit, OnChanges {
-
-  showRemove: boolean = false;
-  showForm: boolean = true;
+  // showRemove: boolean = false;
+  // showForm: boolean = true;
+  // popural:boolean =true;
+  idx:number;
 
   quotes: Quote[] = [
-    new Quote("Don't live to make your presence noticed, live to make your absence felt", 'Bob Marley', new Date('2019, 02, 12'), 'john', 1, 0),
+    new Quote("Don't live to make your presence noticed, live to make your absence felt", 'Bob Marley', new Date('2019, 02, 12'), 'john', 0, 0),
     new Quote('Do not gain the world and lose your soul, wisdom is better than silver or gold...', 'Bob Marley', new Date('2019, 03, 12'), 'john', 0, 0),
     new Quote("And I ask why am I black, they say I was born in sin, and shamed inequity. One of the main songs we used to sing in church makes me sick, 'love wash me and I shall be whiter than snow.", 'Peter Tosh', new Date('2019, 09, 12'), 'john', 0, 0),
     new Quote("I freed a thousand slaves I could have freed a thousand more if only they knew they were slaves.", 'Harriet Tubman', new Date('2019, 10, 12'), 'john', 0, 0)
@@ -39,6 +40,10 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   changeIndex (idx:number) {
     // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
+    //     const indx = quoteVotes.indexOf(Math.max(...quoteVotes))
+    //     this.quotes = this.quotes.map((quote) => { return { ...quote, popular: false,handleRemove():void{}, hide():void{}} })
+    //     this.quotes[idx].popular = true
+    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
     // if (this.quotes[idx].upVotes > 0){
     // console.log(this.quotes.indexOf(this.quotes[idx]));
     // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
@@ -47,6 +52,8 @@ export class QuotesComponent implements OnInit, OnChanges {
     // console.log(indx)
     // quoteVotes.splice(0, 0, quoteVotes.splice(indx, 1)[0]);
     this.quotes.sort((a, b) => b.upVotes - a.upVotes)
+    // console.log(this.quotes)
+    
   }
 
   upVote(idx: number) {
@@ -60,11 +67,20 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   }
 
+  // bestQuote () {
+  //   for ( let quote of this.quotes){ 
+  //     if (this.quotes.indexOf(quote) === 0 && quote.upVotes > 0) {
+  //       return quote.quote
+  //     }
+  //     }
+    
+  }
+
 //   onNotify(message: boolean) {
 //     this.showForm = message;
 // }
 
-  // submitQuote(result) {
+  // submitQuote(result) {v
   //   console.log(result)
   //   this.showForm = false;
   // }
@@ -75,10 +91,12 @@ export class QuotesComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   ngOnChanges() {
     this.quotes = this.quotes;
+    
   }
 
 }
