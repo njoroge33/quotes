@@ -28,17 +28,9 @@ export class QuotesComponent implements OnInit, OnChanges {
     this.quotes.push(quote);
   }
   }
-  
-
-  changeIndex (idx:number) {
-    this.quotes.sort((a, b) => b.upVotes - a.upVotes)
-    
-  }
 
   upVote(idx: number) {
     this.quotes[idx].upVotes += 1;
-    this.changeIndex(idx);
-
   }
 
   downVote(idx: number) {
@@ -46,13 +38,16 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   }
 
-  bestQuote () {
-    for ( let quote of this.quotes){ 
-      if (this.quotes.indexOf(quote) === 0 && quote.upVotes > 0) {
-        return quote.quote
-      }
-      }
-    
+  bestQuote() {
+    let upVoteArr: number[] = [];
+    for (let i of this.quotes) {
+      upVoteArr.push(i.upVotes);
+    }
+    let maxVote = Math.max(...upVoteArr);
+    let highestVotedQuote = this.quotes.find(quote => quote.upVotes === maxVote);
+    if(highestVotedQuote.upVotes){
+    return highestVotedQuote.quote;
+    }
   }
 
   constructor() { }
@@ -62,7 +57,6 @@ export class QuotesComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.quotes = this.quotes;
     
   }
 
