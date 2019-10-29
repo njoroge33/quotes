@@ -28,25 +28,10 @@ export class QuotesComponent implements OnInit, OnChanges {
     this.quotes.push(quote);
   }
   }
-  // addVotes ():void {
-  //   this.quotes.upVotes = this.quotes.upVotes+=1;
-  // }
+  
 
   changeIndex (idx:number) {
-    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
-    //     const indx = quoteVotes.indexOf(Math.max(...quoteVotes))
-    //     this.quotes = this.quotes.map((quote) => { return { ...quote, popular: false,handleRemove():void{}, hide():void{}} })
-    //     this.quotes[idx].popular = true
-    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
-    // if (this.quotes[idx].upVotes > 0){
-    // console.log(this.quotes.indexOf(this.quotes[idx]));
-    // const quoteVotes = this.quotes.map((quote) => quote.upVotes)
-    // console.log(quoteVotes)
-    // const indx = quoteVotes.indexOf(Math.max(...quoteVotes))
-    // console.log(indx)
-    // quoteVotes.splice(0, 0, quoteVotes.splice(indx, 1)[0]);
     this.quotes.sort((a, b) => b.upVotes - a.upVotes)
-    // console.log(this.quotes)
     
   }
 
@@ -70,18 +55,6 @@ export class QuotesComponent implements OnInit, OnChanges {
     
   }
 
-//   onNotify(message: boolean) {
-//     this.showForm = message;
-// }
-
-  // submitQuote(result) {v
-  //   console.log(result)
-  //   this.showForm = false;
-  // }
-
-  // addNewGoal(quote){
-  //   this.quotes.push(quote)
-  // }
   constructor() { }
 
   ngOnInit() {
