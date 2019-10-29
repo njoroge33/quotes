@@ -8,9 +8,7 @@ import { Quote } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit, OnChanges {
-  // showRemove: boolean = false;
-  // showForm: boolean = true;
-  // popural:boolean =true;
+  
   idx:number;
 
   quotes: Quote[] = [
@@ -21,11 +19,7 @@ export class QuotesComponent implements OnInit, OnChanges {
 
   ];
 
-  // newQuote = {
-  //   createdBy: '',
-  //   quote: '',
-  //   author: '',
-  // }
+  
 
   addNewQuote(quote) {
     if (quote.createdBy === '' || quote.author === '' || quote.quote === ''){
